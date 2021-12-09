@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#form-integrantes {
+	font-family: 14px;
+	font-weight: bold;
+}
+
+.input-cantidad-integrantes {
+	width: 30%;
+}
+.input-edad-integrantes {
+	width: 50%;
+}

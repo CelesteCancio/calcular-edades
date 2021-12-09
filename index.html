@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo de promedio de edades</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+</head>
+<body>
+    <form id="form-integrantes">
+        <label class="label-cantidad-integrantes">Cantidad de integrantes en el grupo familiar:</label>
+        <input type="number" class="input-cantidad-integrantes" placeholder="Ingrese cantidad">
+        <input type="button" class="submit-cantidad-integrantes" id="submit-cantidad-integrantes" value="Listo">
+        <div class="div-label-input-integrantes"></div>
+        <input type="button" class="submit-cantidad-integrantes" id="submit-calculos" value="Calcular">
+    </form>
+    <div class="div-calculos">
+        <div class="label-calculos" id="mayor-edad"></div>
+        <div class="label-calculos" id="menor-edad"></div>
+        <div class="label-calculos" id="promedio-edad"></div>
+    </div>
+    <input type="button" class="resetear" value="Resetear">
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
