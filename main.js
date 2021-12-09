@@ -13,7 +13,7 @@ const inputCantidadIntegrantes= document.querySelector(".input-cantidad-integran
 submitCantidadIntegrantes.addEventListener("click", function (e) {
     
     cantidadIntegrantes = Number(document.querySelector(".input-cantidad-integrantes").value);
-    //console.log(cantidadIntegrantes);
+    console.log(cantidadIntegrantes);
     
     borrarIntegrantesAnteriores();
     crearIntegrantes();
@@ -21,7 +21,6 @@ submitCantidadIntegrantes.addEventListener("click", function (e) {
     e.stopPropagation;
     return false;
 
-    
 },false);
 
 function borrarIntegrantesAnteriores(){
@@ -39,10 +38,9 @@ function crearIntegrantes(){
     else{
         for (let i=1; i<=cantidadIntegrantes; i++){
             crearIntegrante(i);            
-        }
-
-    
+        }   
     }
+    document.querySelector("#submit-calculos").className="";
 }
 
 function crearIntegrante(i){
@@ -106,11 +104,17 @@ submitCalculos.addEventListener ("click", function () {
         console.log(edadPromedio);
     }
         
-    document.querySelector("#mayor-edad").innerText = `La mayor edad del grupo familiar es: ${edadMax}`;
-    document.querySelector("#menor-edad").innerText = `La menor edad del grupo familiar es: ${edadMin}`;
-    document.querySelector("#promedio-edad").innerText = `El promedio de edad del grupo familiar es: ${edadPromedio}`;
+    document.querySelector("#mayor-edad").innerText = edadMax.toString();
+    document.querySelector("#menor-edad").innerText = edadMin;
+    document.querySelector("#promedio-edad").innerText = edadPromedio;
+    document.querySelector("#div-calculos").className = "";
 }); 
 
 document.querySelector(".resetear").onclick = function (){
-    resetear();
-}
+    borrarIntegrantesAnteriores();
+    document.querySelector("#submit-calculos").className="oculto";
+    document.querySelector("#div-calculos").className="oculto";
+};
+
+
+
